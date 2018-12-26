@@ -4,7 +4,7 @@
   <groupId>ECOMMERS</groupId>
   <artifactId>ebay</artifactId>
   <packaging>war</packaging>
- <version>1.0.0.${BUILD_NUMBER}</version>
+ <version>1.0.237.${BUILD_NUMBER}</version>
   
 <!-- <version>1.0.1.0-SNAPSHOT</version>  -->
 
