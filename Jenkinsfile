@@ -1,7 +1,7 @@
 pipeline {
 		agent any
 		stages {
-				stage ('Clean Stage') {
+				stage ( 'Clean Stage' ) {
 						steps {
 								withMaven (maven : 'M2_HOME_3.5' ) {
 									sh 'mvn clean'
@@ -11,7 +11,7 @@ pipeline {
 					
 					
 					
-				stage ('Copilation') {
+				stage ( 'Copilation' ) {
 						steps {
 								withMaven (maven : 'M2_HOME_3.5' ) {
 									sh 'mvn compile'
@@ -19,7 +19,7 @@ pipeline {
 							}		
 					}
 					
-				stage ('Unit Test') {
+				stage ( 'Unit Test' ) {
 						steps {
 								withMaven (maven : 'M2_HOME_3.5' ) {
 									sh 'mvn test'
@@ -27,7 +27,7 @@ pipeline {
 							}		
 					}
 					
-				stage ('Packaging') {
+				stage ( 'Packaging' ) {
 						steps {
 								withMaven (maven : 'M2_HOME_3.5' ) {
 									sh 'mvn package'
