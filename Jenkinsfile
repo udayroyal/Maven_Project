@@ -3,7 +3,7 @@ pipeline {
 		stages {
 				stage ('Clean Stage') {
 						steps {
-								withMaven (maven : 'MAVEN_3.5/bin') {
+								withMaven (maven : '/root/.jenkins/workspace/Pipeline as a code') {
 									sh 'mvn clean'
 										}
 							}	
@@ -13,7 +13,7 @@ pipeline {
 					
 				stage ('Copilation') {
 						steps {
-								withMaven (maven : 'MAVEN_3.5/bin') {
+								withMaven (maven : '/root/.jenkins/workspace/Pipeline as a code') {
 									sh 'mvn compile'
 										}
 							}		
@@ -21,7 +21,7 @@ pipeline {
 					
 				stage ('Unit Test') {
 						steps {
-								withMaven (maven : 'MAVEN_3.5/bin') {
+								withMaven (maven : '/root/.jenkins/workspace/Pipeline as a code') {
 									sh 'mvn test'
 										}
 							}		
@@ -29,7 +29,7 @@ pipeline {
 					
 				stage ('Packaging') {
 						steps {
-								withMaven (maven : 'MAVEN_3.5/bin') {
+								withMaven (maven : '/root/.jenkins/workspace/Pipeline as a code') {
 									sh 'mvn package'
 										}
 							}		
