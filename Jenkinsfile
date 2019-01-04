@@ -11,7 +11,7 @@ pipeline {
 		stage ( 'static code analysis is performed in the stage ' ) {								
 							steps {
 									withMaven (maven : 'M2_HOME_3.5' ) {
-										sh 'mvn clean package sonar:sonar'
+										sh 'mvn sonar:sonar'
 											}
 								}	
 						}						
