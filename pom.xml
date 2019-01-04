@@ -255,6 +255,10 @@
 					<groupId>ord.codehaus.mojo</groupId>
 					<artifactId>sonar-maven-plugin</artifactId> 
 					<version>2.2</version>
+					<configuration>          
+						<url>http://18.224.2.180:9000/</url>          
+						<server>SonarQube</server>          
+					</configuration>
 		</plugin>
 		
 
