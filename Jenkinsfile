@@ -8,13 +8,13 @@ pipeline {
 									}	
 						}		
 
-		stage ( 'static code analysis is performed in the Stage ' ) {								
-							steps {
-									withMaven (maven : 'M2_HOME_3.5' ) {
-										sh 'mvn sonar:sonar'
-											}
-								}	
-						}						
+	 //	stage ( 'static code analysis is performed in the Stage ' ) {								
+	 //						steps {
+	 //								withMaven (maven : 'M2_HOME_3.5' ) {
+	 //									sh 'mvn sonar:sonar'
+	 //										}
+	 //							}	
+	 //					}						
 
 		stage ( 'Clean Phase' ) {								
 							steps {
