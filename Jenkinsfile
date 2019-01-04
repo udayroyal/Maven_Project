@@ -47,7 +47,15 @@ pipeline {
 										sh 'mvn clean package'
 											}
 								}	
-						}						
+						}
+					stage ( 'Deploy into Artifatory Repo' ) {
+							steps {
+									withMaven (maven : 'M2_HOME_3.5' ) {
+										sh 'mvn clean package deploy'
+											}
+								}	
+						}
+						
 					stage ( 'Code Coverage' ) {
 							steps {
 										jacoco()
