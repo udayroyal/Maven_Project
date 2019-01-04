@@ -314,12 +314,13 @@
     </snapshotRepository>
   </distributionManagement> -->
   
- <!--   <distributionManagement>
-    <repository>
+   <distributionManagement>
+   
+   <repository>
         <uniqueVersion>false</uniqueVersion>
-        <id>Jfrog</id>
+        <id>NexusRepo</id>
         <name>Internal Releasesl</name>
-
+        <url>http://192.168.0.19:8081/artifactory/libs-release/</url>
         <layout>default</layout>
     </repository>
 	
@@ -331,7 +332,7 @@
     </snapshotRepository>
   </distributionManagement> 
   
-     <reporting>
+    <!--  <reporting>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -346,6 +347,6 @@
           </reportSets>
         </plugin>
       </plugins>
-    </reporting> -->
-  
+    </reporting>
+   -->
 </project>
