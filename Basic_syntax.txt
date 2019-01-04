@@ -1,7 +1,7 @@
 pipeline {
 		agent any
 		stages {
-							stage ('Clean Stage') {
+							stage ('Clean_Stage') {
 								steps {
 									withMaven (maven : 'MAVEN_3.5/bin') {
 										sh 'mvn clean'
