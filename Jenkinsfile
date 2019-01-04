@@ -2,13 +2,21 @@ pipeline {
 		agent any
 		stages {   
 
-					stage ( 'Chicken into GitHub' ) {								
+					stage ( 'Clone sources From GitHub' ) {								
 							steps {
 										git credentialsId: '0718e330-6d54-4bde-ae21-0402451752d3', url: 'https://github.com/venkeystore/Maven_Project.git'
 									}	
 						}		
-		
-					stage ( 'Clean Phase' ) {								
+
+		stage ( 'static code analysis is performed in the stage ' ) {								
+							steps {
+									withMaven (maven : 'M2_HOME_3.5' ) {
+										sh 'mvn clean package sonar:sonar'
+											}
+								}	
+						}						
+
+		stage ( 'Clean Phase' ) {								
 							steps {
 									withMaven (maven : 'M2_HOME_3.5' ) {
 										sh 'mvn clean '
